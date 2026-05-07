@@ -165,8 +165,10 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-friend-2 { --r: 6deg; }
 .hero-friend-3 { --r: 4deg; }
 @media (max-width: 720px) {
-  .hero-friend-1, .hero-friend-3 { display: none; }
-  .hero-friend-2 { width: 60px; top: 8%; right: 6%; }
+  .hero-friend { width: 60px; }
+  .hero-friend-1 { top: 6%; left: 4%; }
+  .hero-friend-2 { top: 8%; right: 4%; }
+  .hero-friend-3 { bottom: 10%; left: 4%; width: 55px; }
 }
 
 /* Sections */
