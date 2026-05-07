@@ -133,20 +133,40 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn-ghost:hover { background: var(--pink-soft); opacity: 1; }
 
-.hero-deco { position: absolute; inset: 0; pointer-events: none; }
-.paw {
-  position: absolute;
-  font-size: 36px;
-  opacity: 0.3;
-  animation: float 4s ease-in-out infinite;
+.hero-image {
+  width: clamp(180px, 32vw, 280px);
+  height: auto;
+  margin: 0 auto 18px;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(180, 120, 90, 0.25));
+  animation: bounce 3s ease-in-out infinite;
 }
-.paw-1 { top: 12%; left: 8%; animation-delay: 0s; }
-.paw-2 { top: 24%; right: 10%; animation-delay: 1s; font-size: 28px; }
-.paw-3 { bottom: 18%; left: 14%; animation-delay: 2s; font-size: 32px; }
-.paw-4 { bottom: 12%; right: 8%; animation-delay: 1.5s; font-size: 30px; }
-@keyframes float {
-  0%,100% { transform: translateY(0) rotate(-10deg); }
-  50% { transform: translateY(-12px) rotate(10deg); }
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.hero-friends { position: absolute; inset: 0; pointer-events: none; }
+.hero-friend {
+  position: absolute;
+  width: clamp(70px, 10vw, 120px);
+  height: auto;
+  opacity: 0.85;
+  filter: drop-shadow(0 4px 10px rgba(180, 120, 90, 0.2));
+  animation: float-friend 5s ease-in-out infinite;
+}
+.hero-friend-1 { top: 10%; left: 4%; animation-delay: 0s; transform: rotate(-8deg); }
+.hero-friend-2 { top: 16%; right: 4%; animation-delay: 1.5s; transform: rotate(6deg); }
+.hero-friend-3 { bottom: 14%; left: 6%; animation-delay: 2.5s; transform: rotate(4deg); }
+@keyframes float-friend {
+  0%,100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-10px) rotate(var(--r, 0deg)); }
+}
+.hero-friend-1 { --r: -8deg; }
+.hero-friend-2 { --r: 6deg; }
+.hero-friend-3 { --r: 4deg; }
+@media (max-width: 720px) {
+  .hero-friend-1, .hero-friend-3 { display: none; }
+  .hero-friend-2 { width: 60px; top: 8%; right: 6%; }
 }
 
 /* Sections */
@@ -229,7 +249,22 @@ img { max-width: 100%; height: auto; display: block; }
 .sticker-badge-sale { background: #ff8aa8; }
 .sticker-badge-review { background: #5fb8e0; }
 .sticker-badge-wip { background: #c89876; }
-.sticker-emoji { font-size: 56px; margin-bottom: 12px; }
+.sticker-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  margin-bottom: 14px;
+}
+.sticker-image {
+  max-width: 160px;
+  max-height: 160px;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(180, 120, 90, 0.15));
+  transition: transform 0.3s;
+}
+.sticker-card:hover .sticker-image { transform: scale(1.08) rotate(-3deg); }
 .sticker-card h3 { color: var(--brown); font-size: 18px; margin-bottom: 6px; }
 .sticker-meta { font-size: 12px; color: var(--text-soft); margin-bottom: 12px; letter-spacing: 0.05em; }
 .sticker-desc { font-size: 13px; color: var(--text); margin-bottom: 18px; min-height: 60px; }
