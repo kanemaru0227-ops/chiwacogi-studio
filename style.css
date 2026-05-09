@@ -238,6 +238,8 @@ img { max-width: 100%; height: auto; display: block; }
 .sticker-card-higeoji { border-color: #d4d4d4; background: linear-gradient(180deg, #f5f5f5 0%, #fff 50%); }
 .sticker-card-ishikawa { border-color: #b5d8eb; background: linear-gradient(180deg, #eaf4fb 0%, #fff 50%); }
 .sticker-card-yorkie { border-color: #ffc0d8; background: linear-gradient(180deg, #ffe8f1 0%, #fff 50%); }
+.sticker-card-frenchie { border-color: #c9b8a3; background: linear-gradient(180deg, #f5ede2 0%, #fff 50%); }
+.sticker-card-capybara { border-color: #b8d4a8; background: linear-gradient(180deg, #ecf5e3 0%, #fff 50%); }
 .sticker-badge {
   position: absolute;
   top: 14px;
