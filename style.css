@@ -213,7 +213,7 @@ img { max-width: 100%; height: auto; display: block; }
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .about-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-.about-icon { font-size: 44px; margin-bottom: 12px; }
+.about-icon { width: 88px; height: 88px; margin: 0 auto 12px; object-fit: contain; display: block; }
 .about-card h3 { color: var(--brown); margin-bottom: 10px; font-size: 17px; }
 .about-card p { font-size: 14px; color: var(--text-soft); }
 
@@ -240,6 +240,7 @@ img { max-width: 100%; height: auto; display: block; }
 .sticker-card-yorkie { border-color: #ffc0d8; background: linear-gradient(180deg, #ffe8f1 0%, #fff 50%); }
 .sticker-card-frenchie { border-color: #c9b8a3; background: linear-gradient(180deg, #f5ede2 0%, #fff 50%); }
 .sticker-card-capybara { border-color: #b8d4a8; background: linear-gradient(180deg, #ecf5e3 0%, #fff 50%); }
+.sticker-card-tanuki { border-color: #c8a484; background: linear-gradient(180deg, #f3e6d4 0%, #fff 50%); }
 .sticker-badge {
   position: absolute;
   top: 14px;
@@ -393,11 +394,9 @@ img { max-width: 100%; height: auto; display: block; }
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .sns-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); opacity: 1; }
-.sns-icon { font-size: 38px; margin-bottom: 8px; }
+.sns-icon { width: 76px; height: 76px; margin: 0 auto 8px; object-fit: contain; display: block; }
 .sns-name { font-weight: 900; color: var(--brown); margin-bottom: 4px; }
 .sns-handle { font-size: 12px; color: var(--text-soft); }
-.sns-x .sns-icon { color: #000; font-weight: 900; }
-.sns-instagram .sns-icon { filter: hue-rotate(0deg); }
 
 /* Future */
 .future-list {
