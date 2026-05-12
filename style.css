@@ -240,6 +240,27 @@ img { max-width: 100%; height: auto; display: block; }
 .sticker-card-yorkie { border-color: #ffc0d8; background: linear-gradient(180deg, #ffe8f1 0%, #fff 50%); }
 .sticker-card-frenchie { border-color: #c9b8a3; background: linear-gradient(180deg, #f5ede2 0%, #fff 50%); }
 .sticker-card-capybara { border-color: #b8d4a8; background: linear-gradient(180deg, #ecf5e3 0%, #fff 50%); }
+.sticker-card-tanuki { border-color: #d4a373; background: linear-gradient(180deg, #faedcd 0%, #fff 50%); }
+
+.sticker-subtitle {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 26px);
+  color: var(--brown);
+  margin: 50px 0 26px;
+  font-weight: 900;
+}
+.sticker-subtitle:first-of-type { margin-top: 10px; }
+.sticker-count {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-soft);
+  margin-left: 8px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 600px) {
+  .sticker-count { display: block; margin-left: 0; margin-top: 4px; }
+}
 .sticker-card-tanuki { border-color: #c8a484; background: linear-gradient(180deg, #f3e6d4 0%, #fff 50%); }
 .sticker-badge {
   position: absolute;
